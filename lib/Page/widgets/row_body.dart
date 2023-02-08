@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pattern_formatter/pattern_formatter.dart';
-import 'package:quoter/Page/widgets/new_row.dart';
 
 import 'textfield.dart';
 import 'textfield_index.dart';
@@ -28,6 +27,8 @@ class RowBody extends StatefulWidget {
 class _RowBodyState extends State<RowBody> {
   @override
   Widget build(BuildContext context) {
+
+
     double fob = widget.qty * widget.unity;
     double frete = fob * 0.10;
     double seguro = (fob + frete) * 0.02;

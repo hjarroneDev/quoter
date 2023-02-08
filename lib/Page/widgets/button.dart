@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../Provider/list.dart';
 
 class Button extends StatefulWidget {
   final String path;
@@ -16,7 +19,9 @@ class _ButtonState extends State<Button> {
     return Material(
       borderRadius: BorderRadius.circular(5),
       child: InkWell(
-        onTap: (() {}),
+        onTap: (() {
+          context.read<Mylist>().newRow('', 0, 0, 0);
+        }),
         child: Container(
           width: 30,
           decoration: BoxDecoration(

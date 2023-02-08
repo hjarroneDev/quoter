@@ -14,7 +14,9 @@ class TextfieldIndex extends StatelessWidget {
       width: 160,
       builder: (BuildContext context) {
         return [
-          const MiniMenu(),
+          MiniMenu(
+            indexs: indexs,
+          ),
         ];
       },
       child: TextField(

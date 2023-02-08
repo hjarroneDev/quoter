@@ -3,8 +3,10 @@ import 'widget/menu_minA.dart';
 import 'widget/text-Button.dart';
 
 class MiniMenu extends StatefulWidget {
+  final int indexs;
   const MiniMenu({
     super.key,
+    required this.indexs,
   });
 
   @override
@@ -16,28 +18,18 @@ class _MiniMenuState extends State<MiniMenu> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        MiniMenuA(),
-        Divider(
+      children: [
+        MiniMenuA(
+          indexs: widget.indexs,
+        ),
+        const Divider(
           height: 1,
-          indent: 5,
-          endIndent: 5,
+          indent: 3,
+          endIndent: 3,
         ),
         TextButtonMenu(
-          context: 'New Row Above',
-        ),
-        Divider(
-          height: 1,
-          indent: 5,
-          endIndent: 5,
-        ),
-        TextButtonMenu(
-          context: 'New Row Below',
-        ),
-        Divider(
-          height: 1,
-          indent: 5,
-          endIndent: 5,
+          context: 'New Row',
+          indexs: widget.indexs,
         ),
       ],
     );

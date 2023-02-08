@@ -15,7 +15,7 @@ class _TextFieldMenuMiniState extends State<TextFieldMenuMini> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 2),
+      padding: const EdgeInsets.only(right: 3),
       child: SizedBox(
         height: 25,
         width: 35,
@@ -29,7 +29,7 @@ class _TextFieldMenuMiniState extends State<TextFieldMenuMini> {
             counterText: '',
             hoverColor: Colors.indigo.withOpacity(0.2),
             filled: true,
-            fillColor: Colors.grey.shade300,
+            fillColor: Colors.indigo.shade100,
             isDense: true,
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 2, vertical: 9),
